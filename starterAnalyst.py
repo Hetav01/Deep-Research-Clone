@@ -1,6 +1,6 @@
 from agents import trace, Runner
 from agentCollection.todoAgent import QueryResponse
-from agentCollection import todoAgent
+from agentCollection.todoAgent import todoAgent
 from rich.console import Console
 from rich.panel import Panel
 
@@ -11,15 +11,16 @@ class ResearchAnalyst:
     def  __init__(self, query: str):
         self.query = query
     
-    async def research(self) -> str:
+    async def research_func(self) -> str:
         with trace("Deep Research Tool"):
+            todos = await self.generateTodos() 
     
     async def generateTodos(self) -> QueryResponse:
         result = await Runner.run(todoAgent, input=self.query)
         
         console.print(Panel(f"[bold cyan]ToDo Analysis[/bold cyan]"))
         console.print(f"[yellow]Thoughts:[/yellow] {result.final_output.thoughts}")
-        console.print(f"[yellow]Generated ToDos:[/yellow] {result.final_output.queries}")
+        console.print(f"[yellow]Generated ToDos:[/yellow] {result.final_output.queries}\n")
         
         for i, query in enumerate(result.final_output.queries, 1):
             console.print(f"[green]Query {i}:[/green] {query}")

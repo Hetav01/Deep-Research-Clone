@@ -47,7 +47,7 @@ Always provide both your thinking process and the generated queries in the outpu
 
 class QueryResponse(BaseModel):
     queries: List[str]
-    thought: str
+    thoughts: str
 
 todoAgent = Agent(
     name= "Todo Agent",
