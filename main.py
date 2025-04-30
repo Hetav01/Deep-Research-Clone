@@ -30,6 +30,8 @@ async def main() -> None:
     print("\n[bold cyan]Research Report: \n[/bold cyan]")
     print(report)
     
+    
+    
 
 if __name__ == "__main__":
     asyncio.run(main())

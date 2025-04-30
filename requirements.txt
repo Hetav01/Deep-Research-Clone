@@ -5,3 +5,6 @@ requests
 tavily-python
 python-dotenv
 rich
+langchain-tavily
+langchain-community
+langchain-core
