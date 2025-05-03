@@ -1,4 +1,3 @@
-```markdown
 # The Evolution and Trends of AI by 2025
 
 ## Table of Contents
@@ -64,4 +63,3 @@ The evolution of AI by 2025 is characterized by breakthroughs in large language 
 9. **AI in 2025: Breakthroughs and Dangers — What to Expect ...**, Hostbor — [Link](https://hostbor.com/ai-chto-v-2025/)  
 21. **Key AI Regulations in 2025: What Enterprises Need to Know**, credo.ai — [Link](https://www.credo.ai/blog/key-ai-regulations-in-2025-what-enterprises-need-to-know)  
 25. **AI Regulations in 2025 — Blueprints For Responsible AI**, procurementtactics.com — [Link](https://procurementtactics.com/ai-regulations/)  
-```
