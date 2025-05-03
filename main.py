@@ -27,8 +27,7 @@ async def main() -> None:
 
     report = await researchAnalyst.research_func()
     
-    print("\n[bold cyan]Research Report: \n[/bold cyan]")
-    print(report)
+    console.print(f"[bold cyan]Research Report: {report}[/bold cyan]")
     
     
     

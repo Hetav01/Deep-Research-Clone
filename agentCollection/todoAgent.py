@@ -1,6 +1,7 @@
 from agents import Agent
-from pydantic import BaseModel
-from typing import List
+# from pydantic import BaseModel
+# from typing import List
+from pydanticModels import TodoResponse
 
 # perfected this prompt using my own prompt tuning technique of generating a prompt using 4o and then using o3 to reason and give a better prompt output.
 
@@ -45,13 +46,11 @@ Always provide both your thinking process and the generated queries in the outpu
 
 """
 
-class QueryResponse(BaseModel):
-    queries: List[str]
-    thoughts: str
+
 
 todoAgent = Agent(
     name= "Todo Agent",
     instructions=TODO_AGENT_PROMPT,
-    output_type= QueryResponse,
+    output_type= TodoResponse,
     model= "gpt-4o-mini",
 )

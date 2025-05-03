@@ -2,7 +2,10 @@ from agents import Agent, function_tool
 from bs4 import BeautifulSoup
 import requests
 from pydantic import BaseModel
+from pydanticModels import SearchExecutionResponse
 
+# this tool is a basic scraper and is not very advanced at scraping text from diverse sources. For such usage, you might need to use Tavily end-to-end.
+# that might help develop a more advanced scraper that can handle different types of content and formats. It is an expensive tool, so use it wisely.
 
 @function_tool
 def scraper(url: str) -> str:
@@ -46,7 +49,7 @@ SEARCH_AGENT_PROMPT = """
 
     OUTPUT – USE THIS EXACT TEMPLATE
     ### Summary
-    <2–4 succinct paragraphs (≈80–120 words each). Paraphrase core arguments, data, claims, conclusions, and named entities.  
+    <2–4 paragraphs (≈200-400 words each). Paraphrase core arguments, data, claims, conclusions, and named entities.  
     You may blend in **≤100 words** of clearly-marked background knowledge that you might have on the topic to give context. 
 
     ### Meta
@@ -61,14 +64,17 @@ SEARCH_AGENT_PROMPT = """
     5. If content is empty, paywalled, or non-English, output exactly  
 """
 
-class SearchExecutionResponse(BaseModel):
-    search_results: str
-    thoughts: str
+# class SearchExecutionResponse(BaseModel):
+#     search_results: str
+#     thoughts: str
 
+# instead of this we'll make another file to directly store the results so that we can use that in the final reporting agent too.
+
+# output_type= SearchExecutionResponse,
 searchExecutionAgent = Agent(
     name= "Search Execution Agent",
     instructions=SEARCH_AGENT_PROMPT,
-    tools= [scraper],
     output_type= SearchExecutionResponse,
-    model= "gpt-4o-mini",
+    tools= [scraper],
+    model= "gpt-4o",
 )
