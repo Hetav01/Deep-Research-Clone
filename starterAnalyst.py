@@ -1,7 +1,8 @@
 from agents import trace, Runner
 from agentCollection.searchExecutionAgent import searchExecutionAgent
-from agentCollection.todoAgent import QueryResponse
 from agentCollection.todoAgent import todoAgent
+from agentCollection.deepReporterAgent import deepReporterAgent
+from pydanticModels import TodoResponse
 from pydanticModels import SearchExecutionResponse
 
 from rich.console import Console
@@ -47,7 +48,7 @@ class ResearchAnalyst:
             
         return deepresearch_report
     
-    async def generateTodos(self) -> QueryResponse:
+    async def generateTodos(self) -> TodoResponse:
         result = await Runner.run(todoAgent, input=self.query)
         
         console.print(Panel(f"[bold cyan]ToDo Analysis[/bold cyan]"))
@@ -163,7 +164,7 @@ class ResearchAnalyst:
         for i, response in enumerate(self.search_responses, 1):
             input_string += f"{i}. Title: {response.title} \n URL: {response.url} \n Summary: {response.summary} \n"
             
-        agent_result = await Runner.run(searchExecutionAgent, input=input_string)
+        agent_result = await Runner.run(deepReporterAgent, input=input_string)
         
         return agent_result.final_output
               

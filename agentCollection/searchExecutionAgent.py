@@ -74,7 +74,6 @@ SEARCH_AGENT_PROMPT = """
 searchExecutionAgent = Agent(
     name= "Search Execution Agent",
     instructions=SEARCH_AGENT_PROMPT,
-    output_type= SearchExecutionResponse,
     tools= [scraper],
     model= "gpt-4o",
 )
