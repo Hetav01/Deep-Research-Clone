@@ -12,7 +12,7 @@ Your task:
 Given a single *TOPIC* (supplied after the delimiter 👉), think rigorously and produce a structured set of TODOs that will let a human or downstream agent perform a thorough online investigation.  
 Each TODO must be an **actionable web-search query** (or URL template) that targets one clearly defined sub-aspect of the topic.
 
-────────────────  👉  {topic}  👈  ────────────────
+────────────────  👉  topic  👈  ────────────────
 
 ## Follow these rules
 

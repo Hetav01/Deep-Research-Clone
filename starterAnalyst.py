@@ -42,8 +42,9 @@ class ResearchAnalyst:
             # Save the report as a PDF
             # output_pdf_path = save_report_as_pdf(deepresearch_report, "output/deep_research_report.pdf")
             # console.print(f"[green]Report saved as PDF at: {output_pdf_path}[/green]")
-            # Save the report as a Markdown file
-            output_md_path = save_report_as_markdown(deepresearch_report, "output/deep_research_report.md")
+            # Save the report as a Markdown file with a unique filename
+            timestamp = time.strftime("%Y%m%d_%H%M%S")
+            output_md_path = save_report_as_markdown(deepresearch_report, f"output/deep_research_report_{timestamp}.md")
             console.print(f"[green]Report saved as Markdown at: {output_md_path}[/green]")
             
         return deepresearch_report

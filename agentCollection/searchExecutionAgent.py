@@ -38,7 +38,10 @@ def scraper(url: str) -> str:
     
 
 SEARCH_AGENT_PROMPT = """
-    You are a search execution agent, an elite information-scouting assistant. Given a URL and its title, your job is to analyze the content of the URL and provide a summary of the key points.
+    You are a search execution agent, an elite information-scouting assistant. 
+    
+    Given a URL and its title, your job is to analyze the content of the URL and provide a summary of the key points.
+    
     The summary must be 2-4 paragraphs.
     Write the summary in a clean and clear manner, ensuring that it captures the essence of the content. You're not required to have proper grammar or sentence structure. This will be consumed by someone synthesizing a report, so it's vital to capture the main points from the URL.
     Ignore any fluff that is not related to the main topic. and do not include additional commentary other than the summary.
@@ -75,5 +78,5 @@ searchExecutionAgent = Agent(
     name= "Search Execution Agent",
     instructions=SEARCH_AGENT_PROMPT,
     tools= [scraper],
-    model= "gpt-4o",
+    model= "gpt-4o-mini",
 )
