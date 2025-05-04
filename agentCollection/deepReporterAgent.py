@@ -1,4 +1,6 @@
 from agents import Agent
+from agentCollection.todoAgent import todoAgent
+from agentCollection.searchExecutionAgent import searchExecutionAgent
 
 deep_reporter_prompt = """
     You are DeepResearch-Report Generating Agent v1.1, a master-level long-form report generating specialist charged with producing an exhaustive report combining information from all the sources.
@@ -103,6 +105,7 @@ deep_reporter_prompt = """
 deepReporterAgent = Agent(
     name= "Deep Reporter Agent",
     instructions=deep_reporter_prompt,
+    handoffs=[searchExecutionAgent],
     model="gpt-4o",
 )
 
