@@ -1,0 +1,10 @@
+### Summary
+Kyle Korver, a retired professional basketball player, is noted for his impressive shooting skills and longevity in the NBA. Over a career spanning 17 years, he played primarily as a shooting guard and small forward for several teams, including the Philadelphia 76ers, Chicago Bulls, and Atlanta Hawks. His physical statistics include a height of 6'7" and a weight of 212 pounds, which contributed to his effectiveness on the court. Korver was drafted in the second round (51st overall) by the New Jersey Nets in the 2003 NBA Draft and made his debut on October 28, 2003. He is recognized for being a one-time NBA All-Star and receiving the NBA Sportsmanship Award during the 2014-15 season.
+
+In terms of career averages, Korver recorded 9.7 points, 3.0 rebounds, and 1.7 assists per game. Notably, his shooting percentages stand out, with a field goal percentage of 44.2%, a three-point shooting percentage of 42.9%, and a free throw percentage of 87.7%. His effective field goal percentage is 57.4%, indicative of his ability to score efficiently. Additionally, he accumulated a total of 73.4 win shares, which highlights his contributions to his teams over the years. Korver's legacy is further underscored by his status as one of the game's premier three-point shooters.
+
+Korver's playing style focused heavily on perimeter shooting, making him a pivotal asset in an era where three-point shooting became increasingly significant. His strategic movements on the court and ability to find open shots helped solidify his reputation as a game-changer during his tenure in the league. Overall, his statistics reflect not only his individual skills but also his adaptability and sustained performance throughout his basketball career.
+
+### Meta
+- **Source Type**: peer-reviewed  
+- **Article Date**: unknown  
